@@ -47,8 +47,4 @@ r = requests.post(target, headers=headers, files=files, timeout=10)
 
 print(r.text)
 
-m = re.search(r"HTB\{[^}]+\}", r.text)
-if m:
-    print("\nFLAG:", m.group(0))
-else:
-    print("\nNo flag regex hit. Check the response body above.")
+# python3 solve.py http://<spawned-host>:<port>
